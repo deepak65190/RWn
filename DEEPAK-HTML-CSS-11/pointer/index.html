@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        cursor: none;
+      }
+      .cursor {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+        border-radius: 50%;
+
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      .cursor:nth-child(1) {
+        background-color: #7a5ede;
+        z-index: 1;
+      }
+
+      .cursor:nth-child(2) {
+        background-color: #000000;
+      }
+      .cursor:nth-child(3) {
+        background-color: #e2e619;
+      }
+      .cursor:nth-child(4) {
+        background-color: #d120ce;
+      }
+      body{
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).mousemove(function (e) {
+      $(".cursor").eq(0).css({
+        left: e.clientX,
+        top: e.clientY,
+      });
+      setTimeout(function () {
+        $(".cursor").eq(1).css({
+          left: e.clientX,
+          top: e.clientY,
+        });
+      }, 100);
+      setTimeout(function () {
+        $(".cursor").eq(2).css({
+          left: e.clientX,
+          top: e.clientY,
+        });
+      }, 200);
+      setTimeout(function () {
+        $(".cursor").eq(3).css({
+          left: e.clientX,
+          top: e.clientY,
+        });
+      }, 300);
+    });
+  </script>
+</html>
