@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="event-calendar-evo/evo-calendar/css/evo-calendar.css">
+    <!-- <link rel="stylesheet" href="event-calendar-evo/evo-calendar/css/evo-calendar.midnight-blue.min.css">
+    <link rel="stylesheet" href="event-calendar-evo/evo-calendar/css/evo-calendar.orange-coral.min.css"> -->
+    <!-- <link rel="stylesheet" href="event-calendar-evo/evo-calendar/css/evo-calendar.royal-navy.min.css"> -->
+    <style>
+        .calendar-sidebar{
+            background-color: red;
+        }
+        h1{
+        color:teal ;
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 5%;
+
+    }
+    .gmap_canvas {overflow:hidden;
+        background:none!important;
+        width:100%;
+        height:auto;
+        margin-left: auto;
+       border-radius: 5px;
+
+    }
+    #con{
+        width: 100%;
+        height: auto;
+        margin: auto;
+
+        text-align: center;
+
+    }
+    .mapouter{
+         width: 100%;
+        height: auto;
+        margin: auto;
+
+        text-align: center;
+    }
+    </style>
+</head>
+<body onload="getjio()">
+    <div id="evoCalendar"></div>
+    <!-- map -->
+    <div id="con"></div>
+    <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="event-calendar-evo/evo-calendar/js/evo-calendar.min.js"></script>
+<script src="index.js"></script>
+<script>
+myEvents = [
+  { 
+    id: "required-id-1",
+    name: "New Year", 
+    date: "Wed Jan 01 2020 00:00:00 GMT-0800 (Pacific Standard Time)", 
+    type: "holiday", 
+    everyYear: true 
+  },
+  { 
+    id: "required-id-2",
+    name: "Valentine's Day", 
+    date: "Fri Feb 14 2020 00:00:00 GMT-0800 (Pacific Standard Time)", 
+    type: "holiday", 
+    everyYear: true,
+    color: "#222"
+  },
+  { 
+    id: "required-id-3",
+    name: "Custom Date", 
+    badge: "08/03 - 08/05",
+    date: ["August/03/2020", "August/05/2020"],
+    description: "Description here" ,
+    type: "event", 
+  },
+  
+]
+
+    $(document).ready(function(){
+        $('#evoCalendar').evoCalendar({
+  calendarEvents: myEvents
+});
+// map js
+    })
+</script>
+</html>
