@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-3</title>
+    <link href="css-file/Project-3.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+        integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*--------------------------------------  COMMON  PROPERTIES  --------------------------------------------*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.j-content-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.j-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.j-content-start {
+    justify-content: flex-start;
+    display: flex;
+}
+
+.align-items {
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+/* ----------------------------------------------- HEADER ------------------------------------------------ */
+
+.header-section {
+    padding: 0px 15px;
+    height: 100px;
+}
+
+.header-img {
+    line-height: 100px;
+}
+
+.header-menu {
+    line-height: 100px;
+    width: 617px;
+    height: 100px;
+}
+
+.h4-color {
+    color: #ff8F26;
+}
+.h4-js {
+    background-color: green;
+}
+.header-menu ul a {
+    width: 95px;
+    height: 90px;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    padding: 5px;
+    text-transform: capitalize;
+}
+.header-menu a {
+    line-height: 90px;
+}
+.header-menu li:hover {
+    color: #ff8F26;
+}
+.header-img {
+    height: 100px;
+}
+.header-img img {
+    width: 200px;
+    height: 41px;
+    margin-top: 25px;
+}
+.header-box {
+    width: 188px;
+    height: 55px;
+    background-color: #ff8F26;
+    margin-top: 25px
+}
+.header-box h4 {
+    line-height: 55px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* -----------------------------------------------{ MAIN }---------------------------------------------- */
+
+/* ----------------------------------------------- MAIN-SECTION  --------------------------------------- */
+.main-section {
+    background-image: url("../img/hero-image-3.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-box {
+    width: 255px;
+    height: 45px;
+    background-color: white;
+}
+
+.main-box h4 {
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.main-h2 h2 {
+    font-size: 75px;
+    max-width: 645px;
+    color: white;
+    line-height: 1.2;
+    margin-top: 30px;
+}
+
+.main-p p {
+    max-width: 645px;
+    color: white;
+    margin-top: 35px;
+}
+
+.main-box2 {
+    width: 220px;
+    height: 55px;
+    background-color: #ff8F26;
+}
+
+.main-box2 h4 {
+    line-height: 55px;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.main-section::before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #2a2c38;
+    opacity: 0.85;
+}
+
+.main-div-4 {
+    position: relative;
+    z-index: 1;
+}
+
+/* ----------------------------------------------- MAIN-COMPANY-------------------------------------------- */
+.main-company {
+    padding-top: 130px;
+    content: "";
+    padding-bottom: 130px;
+}
+
+.company-img {
+    position: relative;
+    height: 560px;
+    width: 560px;
+}
+.company-img-2{
+    width: 231px;
+    height: 257px;
+    background-color: white;
+    border: 6px solid #ff8F26;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(35%, 50%);
+    
+}
+.company-img-2-content{
+    padding: 40px 50px;
+    height:100%;
+   
+}
+.company-img-2 span{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.c-img-2-box{
+    width:100px;
+    height:100px;
+    background-color:white;
+    border: #ff8F26 8px solid;
+    text-align:center;
+    line-height:88px;
+    border-radius: 50px;
+    margin-top:20px;
+    
+}
+
+.col-2 {
+    width: 50%;
+    height: 689px;
+}
+
+.col-3 {
+    width: 50%;
+}
+
+.company-content {
+    padding-left: 50px;
+}
+
+.company-img img {
+    width: 560px;
+    height: 560px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.c-p {
+    color: #768184;
+    font-size: 16px;
+}
+
+.c-p p {
+    margin-bottom: 20px;
+}
+
+.c-span {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+.c-p2 {
+    color: #768184;
+    font-size: 16px;
+}
+
+.c-icon {
+    width: 50%;
+}
+
+.c-icon i {
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+.c-icon2 i {
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+.c-icon h4 {
+    padding-bottom: 25px;
+}
+
+.c-icon2 h4 {
+    padding-bottom: 25px;
+}
+
+.c-icon i {
+    color: #ff8F26;
+}
+
+.c-icon2 i {
+    color: #ff8F26;
+}
+
+.c-icon h4 {
+    font-size: 20px;
+}
+
+.c-icon2 h4 {
+    font-size: 20px;
+}
+
+.c-icon {
+    width: 50%;
+}
+
+.c-icon p {
+    max-width: 257px;
+    color: #768184;
+}
+
+.c-icon h4 {
+    max-width: 257px;
+}
+
+.c-icon2 h4 {
+    max-width: 257px;
+}
+
+.c-icon2 {
+    width: 50%;
+}
+
+.c-icon2 p {
+    max-width: 257px;
+    color: #768184;
+}
+
+.c-box-h4 {
+    width: 180px;
+    height: 55px;
+    background-color: #ff8F26;
+}
+
+.c-box-h4 {
+    line-height: 55px;
+    text-align: center;
+}
+
+.c-box-i {
+    width: 53px;
+    height: 53px;
+    background-color: #f5f5f5;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.company-box {
+    padding-top: 40px;
+    padding-left: 50px;
+}
+
+.c-box-i i {
+    line-height: 53px;
+    color: #ff8F26;
+}
+
+.c-box-i {
+    margin-right: 17px;
+}
+
+.c-box-a {
+    padding-top: 15px;
+}
+
+.c-box-a a {
+    color: black;
+}
+
+.c-box-h4 {
+    margin-right: 40px;
+}
+/* -------------------------------------------- { MAIN-COMPANY ^^} ------------------------------------------ */
+
+/* ----------------------------------------------- MAIN-COMPANY-------------------------------------------- */
+.c-s-content{
+    text-align: center;
+}
+.c-s-content p{
+    color: #768184;
+    font-size: 16px;
+}
+.c-s-content span{
+    font-size:45px;
+    font-weight:600;
+    width: 530px;
+    
+
+}
+
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-section">
+            <div class="row j-content-between">
+                <div class="header-img">
+                    <img src="img/logo.png">
+                </div>
+                <div class="header-menu">
+                    <div class="j-content-center">
+                        <ul class="d-flex">
+                            <a href="#">
+                                <li>
+                                    <h4 class="h4-color">home</h4>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <h4>about us</h4>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <h4>services</h4>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <h4>pages</h4>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <h4>blog</h4>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <h4>contant</h4>
+                                </li>
+                            </a>
+                            <a href="#"><i class="ri-search-line"></i></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-box">
+                    <h4>Get a Quote >></h4>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="main-section">
+            <div class="container">
+                <div class="align-items j-content-start">
+                    <div class="main-div-4">
+                        <div class="main-box">
+                            <h4>Construction Company</h4>
+                        </div>
+                        <div class="main-h2">
+                            <h2>Construction & Building Agency</h2>
+                        </div>
+                        <div class="main-p">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                suffered alteration in some form</p>
+                        </div>
+                        <div class="main-box2">
+                            <h4>Explore Services > ></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-company">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="company-img">
+                            <img src="img/about-img.jpg">
+                            <div class="company-img-2">
+                                <div class="company-img-2-content">
+                                    <div class="c-img-prj">
+                                        <span>Project Success Rate</span>
+                                    </div>
+                                    <div class="c-img-2-box">
+                                        <span>89%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="company-content">
+                            <div class="c-p">
+                                <p>>> About Company</p>
+                            </div>
+                            <div class="c-span">
+                                <span>Modern Construction & Building Service Provider</span>
+                            </div>
+                            <div class="c-p2">
+                                <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque
+                                    laudantium totam rem aperiam, eaque ipsa quae.</p>
+                            </div>
+                            <div class="d-flex">
+                                <div class="c-icon">
+                                    <i class="fa-solid fa-trowel-bricks"></i>
+                                    <h4>Awards Winning Construction Agency</h4>
+                                    <p>Ut enim ad minima veniam nostrum ollam laboriosam.</p>
+
+                                </div>
+                                <div class="c-icon2">
+                                    <i class="fa-solid fa-wrench"></i>
+                                    <h4>Modern Technology & Expert Engineering</h4>
+                                    <p>To take trivial example which of us undertakes laborious</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-box">
+                            <div class="d-flex">
+                                <div class="c-box-h4">
+                                    <h4>Learn More >></h4>
+                                </div>
+                                <div class="c-box-i">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="c-box-a">
+                                    <a href="#">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Construction-service"> 
+           <div class="c-s-content">
+            <p> >> Best Services</p>
+            <span>We Provide Best Quality </span>
+            <span>Construction Service</span>
+           </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    $(document).ready(function(){
+    $(".h4-color").mouseenter(function(){
+        $(".h4-color").addClass("h4-js")
+    })
+})
+</script>
+
+
+</html>
