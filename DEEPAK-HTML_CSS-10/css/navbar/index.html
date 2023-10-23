@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      a {
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+      }
+      .bg:hover {
+        color: rgb(227, 91, 18);
+      }
+
+      .main {
+        width: 500px;
+        height: 100px;
+        padding: 10px;
+        background-color: crimson;
+        display: flex;
+        justify-content: center;
+
+        gap: 20px;
+        list-style: none;
+      }
+      .child {
+        display: none;
+      }
+      .main li:hover .child {
+        display: block;
+        padding-top: 10px;
+        background-color: black;
+      }
+      .main li:hover .one{
+        display: none;
+      }
+      .two{
+        display: none;
+      }
+      .main li:hover .two{
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="main">
+        <li>
+          <a class="bg" href="#">Courses</a> <i class="fa-solid fa-chevron-down one" style="color: #fafafa;"></i><i class="fa-solid fa-angle-up two" style="color: #ffffff;"></i>
+          <ul class="child">
+            <li><a href="">short </a></li>
+            <li><a href="">Long </a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Courses</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
