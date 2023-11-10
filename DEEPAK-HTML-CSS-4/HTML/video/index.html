@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: Roboto, sans-serif;
+}
+
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+}
+
+    </style>
+</head>
+<body>
+   <div id="chart"></div>
+ 
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+  var options = {
+          series: [{
+          data: [34, 44, 54, 21, 12, 43, 33, 23, 66, 66, 58]
+        }],
+          chart: {
+          type: 'line',
+          height: 350
+        },
+        stroke: {
+          curve: 'stepline',
+        },
+        dataLabels: {
+          enabled: false
+        },
+        title: {
+          text: 'Stepline Chart',
+          align: 'left'
+        },
+        markers: {
+          hover: {
+            sizeOffset: 4
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+</script>
+</html>

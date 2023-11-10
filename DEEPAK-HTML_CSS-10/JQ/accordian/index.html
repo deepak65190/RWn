@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .faq {
+  width: 80%;
+
+}
+
+.item .question {
+  padding: 15px;
+  background: rgb(245, 255, 247);
+  color: rgb(62, 85, 162);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.item .question h4 {
+  margin: 0;
+}
+
+.item .question .fa.fa-minus {
+  display: none;
+}
+
+.item.jquery-accordion-active .fa.fa-minus {
+  display: block;
+}
+
+.item.jquery-accordion-active .fa.fa-plus {
+  display: none;
+}
+
+.item .answer {
+  padding: 15px;
+  display: none;
+}
+.answer{
+    color: white;
+    background-color: teal;
+}
+i{
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <div class="faq">
+        <div class="item">
+          <div class="question">
+            <h4>Question 1</h4>
+            <!-- replace plus/minus icons here -->
+            <i class="fa fa-plus"></i>
+            <i class="fa fa-minus"></i>
+          </div>
+          <div class="answer">Answer 1</div>
+        </div>
+        <div class="item">
+          <div class="question">
+            <h4>Question 2</h4>
+            <i class="fa fa-plus"></i>
+            <i class="fa fa-minus"></i>
+          </div>
+          <div class="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate accusantium aut atque, odio blanditiis earum veritatis maiores harum labore dolor quisquam, quod voluptatem repellendus nesciunt nihil unde dolores consectetur saepe?</div>
+        </div>
+        <div class="item">
+          <div class="question">
+            <h4>Question 3</h4>
+            <i class="fa fa-plus"></i>
+            <i class="fa fa-minus"></i>
+          </div>
+          <div class="answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus sed, hic voluptas suscipit magnam delectus! Iste ratione accusamus sapiente iusto possimus. Aperiam veritatis debitis tempore quisquam similique sit sapiente velit.</div>
+        </div>
+        ...
+      </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="faq-plus-minus/src/jquery-accordion.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".faq").accordion();
+    })
+</script>
+</html>

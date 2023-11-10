@@ -1,0 +1,23 @@
+.one-two{
+    border: 1px solid red;
+    position: fixed;
+ left: 0;
+ right: 0;
+ z-index: 1;
+
+    
+}
+.three{
+    margin-top: 50px;
+}
+
+
+@media   (min-width:0px) and (max-width:768){
+    .main-center{
+       width: 300px;
+       height: auto;
+       margin: auto;
+       border: 1px solid red;
+
+    }
+}
