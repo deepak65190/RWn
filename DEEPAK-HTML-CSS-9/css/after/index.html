@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: white;
+        }
+        .parent{
+            width: 40%;
+            height: auto;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: auto;
+
+        }
+        .parent>div{
+            width: 200px;
+            height: 200px; 
+            background-color: red;
+        }
+        .parent>div:nth-child(1){
+order: 1;
+background-color: black;
+        }
+        .parent>div:nth-child(4){
+order: 2;
+background-color: rgb(18, 220, 186);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+        <div>six</div>
+     
+    </div>
+</body>
+</html>

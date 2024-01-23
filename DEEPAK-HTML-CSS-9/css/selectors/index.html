@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+        margin: auto;
+        font-size: 30px;
+      }
+      .parent>div:nth-child(odd){
+        background-color: black;
+      }
+      /* psuedo element */
+     ::selection{
+        background-color: red;
+        color: white;
+     }
+     .parent::first-letter{
+        color: rgb(241, 5, 5);
+        font-size: 40px;
+     }
+     p::first-line{
+        color: teal;
+
+     }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore aliquid maxime nostrum repellat? Et cum iste officia. Cupiditate tenetur sequi est dolores, voluptatem nihil vero magni iure facilis reprehenderit.
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, laborum. Quidem inventore facilis eum perferendis quibusdam, doloribus nostrum alias iste quis possimus libero culpa iusto architecto. Esse ut accusamus magnam.</p>
+    </div>
+  </body>
+</html>

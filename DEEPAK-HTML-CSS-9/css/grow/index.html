@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.parent{
+    width: 40%;
+    height: 300px;
+    border: 1px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.parent>div{
+    width: 200px;
+    height: 200px; 
+    background-color: red;
+    
+}
+.parent>div:nth-child(2){
+   flex-shrink: 0;
+   
+}
+    
+.parent>div:nth-child(1){
+   flex-grow: 2;
+}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
