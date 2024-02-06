@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myChart{
+        width: 60%;
+        height: 500px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chart">
+      <canvas id="myChart"></canvas>
+    </div>
+  </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById("myChart");
+var data2=
+  new Chart(ctx, {
+    type: "polarArea",
+    data: {
+      labels: ["Red", "Blue", "Yellow"],
+      datasets: [
+        {
+          label: "# of Votes",
+          data: [12, 19, 3],
+          borderWidth: 1,
+          backgroundColor: ["red", "black", "pink"],
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+</script>
