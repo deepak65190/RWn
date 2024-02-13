@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 90%;
+            height: 200px;
+           border: 1px solid red;
+           margin: auto;
+       
+         position: relative;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        div::before{
+            content: "";
+position: absolute; 
+left: 0;
+top: 0;
+width: 100%;
+background-color: red;
+height: 200px;
+opacity: .5;
+filter: blur(10px);
+z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://images.pexels.com/photos/20116341/pexels-photo-20116341/free-photo-of-postal-altiplano-chileno.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+    </div>
+</body>
+</html>
