@@ -25,14 +25,12 @@ img{
     height: 400px;
     object-fit: cover;
 }
-.one{
-    display: none;
-}
+
     </style>
 </head>
 <body>
     <i class="fa-solid fa-bars icon"></i>
-  <div ><img src="https://images.pexels.com/photos/11960541/pexels-photo-11960541.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></div>
+  <div  class="one"><img src="https://images.pexels.com/photos/11960541/pexels-photo-11960541.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></div>
 </body>
 </html>
 <!-- commnents -->
@@ -40,8 +38,9 @@ img{
 
 <script>
     $(document).ready(function(){
-$(".icon").dblclick(function(){
-    $("div").toggleClass("one")
+$(".icon").click(function(){
+    // fadeIn fadeOut
+    $(".one").fadeToggle(1000)
 })
     })
 </script>
