@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    div{
+        width: 100px;
+        height: 100px;
+        /* background-color: red; */
+        /* margin: auto; */
+        border-radius: 50%;
+        animation-name: kausal;
+
+        border-top: 10px solid rgb(101, 124, 214);
+        border-left: 10px solid rgb(138, 224, 123);
+        border-bottom: 10px solid rgb(232, 98, 114);
+        animation-duration: .5s;
+        /* animation-delay: 2s; */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        /* animation-direction: alternate-reverse; */
+    }
+    @keyframes kausal {
+      from{
+        transform: rotate(0deg);
+        /* filter: blur(0px); */
+      }
+      to{
+        transform: rotate(360deg);
+         /* filter: blur(5px); */
+      }
+    }
+  </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
