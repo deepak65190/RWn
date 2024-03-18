@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: auto;
+            height: auto;
+border: 1px solid red;
+display: grid;
+gap: 10px;
+grid-template-columns: repeat(4,1fr);
+
+margin: auto;
+margin-top: 50px;
+        }
+        .parent>div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: auto;
+        }
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            .parent{
+              width: 100%;
+                grid-template-columns: repeat(2,1fr);
+            }
+            
+        }
+
+        @media screen and (min-width:0px) and (max-width:767px) {
+            .parent{
+                width: 100%;
+              
+                grid-template-columns: repeat(1,1fr);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+   <details>
+    <summary>abc</summary>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, rem. Obcaecati iure nostrum debitis, ut quaerat totam neque! Voluptatem veniam inventore consectetur eos molestias rem facere repudiandae officiis aliquam hic.</p>
+   </details>
+</body>
+</html>

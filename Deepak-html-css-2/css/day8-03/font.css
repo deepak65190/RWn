@@ -1,0 +1,37 @@
+
+/* goole font cdn */
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap') ;
+
+
+p{
+    font-size: 2rem;
+
+
+  font-family: abc;
+line-height: 100px;
+text-indent: 100px;
+
+}
+/* 1rem=16px by :default */
+@font-face {
+    font-family:abc ;
+    src: url(multiverse_2/Multiverse.otf);
+}
+
+
+div{
+    font-weight: bolder;
+    word-spacing: 2rem;
+}
+h1{
+    text-align: center;
+    letter-spacing: 2rem;
+    text-transform: lowercase;
+    font-style: italic;
+}
+h3{
+    text-decoration:none;
+}
+a{
+    text-decoration: none   ;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Like me 👍 </button>
+    <span id="count">0</span>
+    <button id="btn2">D-Like me  👎</button>
+</body>
+</html>
+<script>
+let b=document.getElementById("btn") ;
+let c=document.getElementById("count") ;
+let bt2=document.getElementById("btn2") ;
+let ct=0 ;
+
+b.addEventListener("click" ,function(){
+   ct++ ;
+  c.innerText=ct ;
+}) 
+
+bt2.addEventListener("click" ,function(){
+   
+   if(ct<=0){
+    c.innerText=0 ;
+   }else{
+    ct--;
+    c.innerText=ct ;
+   }
+ 
+})
+</script>

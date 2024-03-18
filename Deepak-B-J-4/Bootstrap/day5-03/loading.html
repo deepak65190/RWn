@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+          border-top: 10px solid red;
+          border-bottom: 10px solid yellow;
+          border-left: 10px solid rgb(255, 255, 255) ;        ;
+          border-right: 10px solid purple ;  
+          animation-name: abc ;
+          animation-duration: 0.001s ;
+          animation-timing-function: linear      ;
+          animation-iteration-count: infinite;
+        }
+        @keyframes abc {
+            from{
+                transform: rotate(0deg);
+            } 
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
