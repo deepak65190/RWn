@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color: white;
+        padding: 20px;
+      }
+      div > button:nth-child(1) {
+        background-color: red;
+      }
+      div > button:nth-child(2) {
+        background-color: rgb(28, 247, 130);
+      }
+      div > button:nth-child(3) {
+        background-color: rgb(159, 112, 240);
+      }
+      div > button:nth-child(4) {
+        background-color: rgb(0, 0, 0);
+      }
+      div > button:nth-child(5) {
+        background-color: rgb(38, 67, 253);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="one">
+       <button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button>
+    </div>
+  </body>
+</html>
+<script>
+  let obj = [
+    { name: "one", bg: "red" },
+    { name: "two", bg: "black" },
+    { name: "three", bg: "pink" },
+    { name: "four", bg: "aqua" },
+    { name: "five", bg: "green" },
+  ];
+
+  let a = document.getElementById("one");
+  for (let i = 0; i < obj.length; i++) {
+    let btn = document.createElement("button");
+    btn.innerText = obj[i].name;
+    btn.style.backgroundColor = obj[i].bg;
+    console.log(btn);
+    a.append(btn);
+  }
+</script>
