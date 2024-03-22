@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 20px 40px;
+            border: 1px solid rgb(152, 38, 38);
+            color: rgb(245, 245, 245);
+            background-color: red; 
+            border-radius: 10px;
+           
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        button:hover{
+            background-color: rgb(231, 93, 93);
+        }
+    </style>
+</head>
+<body>
+    <div id="one" >
+       
+    </div>
+</body>
+</html>
+<script>
+   
+let div=document.getElementById("one") ; 
+
+    for(let i=1 ;i<=100 ;i++){
+        let btn=document.createElement("button") ;
+        
+    btn.innerText="Submit" ;
+        div.append(btn)
+       
+    }
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">
+     
+    </div>
+</body>
+</html>
+<script>
+    let div =document.getElementById("one") ;
+    for(let i=1 ;i<=100 ; i++){
+        let img=document.createElement("img") ;
+        img.style.borderRadius="50%" ;
+       
+        let h2=document.createElement("h2") ;
+        h2.innerText="Hello"
+        img.src="https://images.pexels.com/photos/20110848/pexels-photo-20110848/free-photo-of-railway.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" ;
+        div.append(img,h2) ;
+    }
+</script>

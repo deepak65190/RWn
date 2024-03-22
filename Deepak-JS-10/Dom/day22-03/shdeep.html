@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myform">
+        
+        <div>
+            <label for="name" id="label">Name: </label>
+            <input type="text" id="name"><br><br>
+</div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email"><br><br>
+            </div>
+            <div>
+                <label for="tel">Phone no: </label>
+                <input type="tel" id="tel"><br><br>
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password"><br><br>
+            </div>
+            <input type="submit">
+    </form> <br><br>
+
+    <button id="sorting">Sort</button> <br><br>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone no </th>
+                <th>Password </th>
+            </tr>
+        </thead>
+        <tbody id="bd">
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let phone = document.getElementById("tel");
+    let password = document.getElementById("password");
+    let bd=document.getElementById("bd");
+    let btn2 = document.getElementById("sorting");
+
+    let arr = [];
+
+    document.getElementById("myform").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerText = name.value;
+
+        let td2 = document.createElement("td");
+        td2.innerText = email.value;
+
+        let td3 = document.createElement("td");
+        td3.innerText = phone.value;
+
+        let td4 = document.createElement("td");
+        td4.innerText = password.value;
+
+        tr.append(td1, td2, td3, td4);
+        bd.append(tr);
+
+        let obj = {
+            name: name.value,
+            email: email.value,
+            phone: phone.value,
+            password: password.value,
+        }
+        arr.push(obj);
+             
+            name.value="";
+            email.value="";
+            phone.value="";
+            paspassword="";
+
+    });
+
+
+    btn2.addEventListener("click", function () {
+        arr.sort(function (a, b) {
+            return a.phone - b.phone;
+        })
+        bd.innerHTML="";    
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.innerText = arr[i].name;
+
+            let td2 = document.createElement("td");
+            td2.innerText = arr[i].email;
+
+            let td3 = document.createElement("td");
+            td3.innerText = arr[i].phone;
+
+            let td4 = document.createElement("td");
+            td4.innerText = arr[i].password;
+
+            tr.append(td1, td2, td3, td4);
+            bd.append(tr);
+
+            name.value="";
+            email.value="";
+            phone.value="";
+            paspassword="";
+        }
+        console.log(arr);
+
+    })
+
+
+</script>
