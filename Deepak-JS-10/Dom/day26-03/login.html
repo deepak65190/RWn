@@ -82,25 +82,14 @@
   </head>
   <body>
     <div class="container">
-      <h2>Registration Form</h2>
+      <h2>Login Form</h2>
       <form id="myForm">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" />
-        </div>
+       
         <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" />
         </div>
-        <div class="form-group">
-          <label for="phone">Phone Number:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="enter your number"
-          />
-        </div>
+       
         <div class="form-group">
           <label for="password">Password:</label>
           <input
@@ -112,70 +101,26 @@
         </div>
         <input type="submit" />
       </form>
+      <a href="signup.html">singup page</a>
     </div>
-    <!-- form data table -->
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone Number</th>
-          <th>Password</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody id="tb"></tbody>
-    </table>
+  
   </body>
  
 </html>
 <script>
-  let name = document.getElementById("name");
-  let email = document.getElementById("email");
-  let phone = document.getElementById("phone");
-  let password = document.getElementById("password");
-  let tb = document.getElementById("tb");
-  let arr = [];
-  document.getElementById("myForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    let obj = {
-      name: name.value,
-      email: email.value,
-      phone: phone.value,
-      password: password.value,
-    };
+let form=document.getElementById("myForm") ;
 
-    arr.push(obj);
-    display(arr);
-  });
+let credentials=JSON.parse(localStorage.getItem("satya") ) ;
 
-  function display(a) {
-    tb.innerHTML = "";
-    for (let i = 0; i < a.length; i++) {
-      
-      let tr = document.createElement("tr");
-      let td1 = document.createElement("td");
-      td1.innerText = a[i].name;
-
-      let td2 = document.createElement("td");
-      td2.innerText = a[i].email;
-
-      let td3 = document.createElement("td");
-      td3.innerText = a[i].phone;
-
-      let td4 = document.createElement("td");
-      td4.innerText = a[i].password;
-      let td5=document.createElement("td") ;
-      td5.innerText="❌" ;
-      td5.style.cursor="pointer" ;
-      td5.addEventListener("click",function(e){
-       
-      arr.splice(i,1) ;
-     display(arr)
-      })
-      tr.append(td1, td2, td3, td4 ,td5);
-      tb.append(tr);
-    }
-  }
+form.addEventListener("submit",function(e){
+e.preventDefault() ;
+let email=form.email.value ;
+let password= form.password.value ;
+if(credentials.email==email && credentials.password==password){
+    window.location.href="index.html"
+}else{
+    alert("wrong data")
+}
+})
 </script>
 
